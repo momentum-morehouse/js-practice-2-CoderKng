@@ -5,20 +5,33 @@
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
-function remove(array, member) {
+function remove(listNames, exMember) {
     let returnArray = [ ]
-    for (let i = 0; i < array.length; i++) {
-     if (array[i]===member){}    
+    for (let i = 0; i < listNames.length; i++) {
+     if (listNames[i]!==exMember){
+         returnArray.push(listNames[i])
+     }    
     }
    return returnArray
-
+}
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+function sum(numArray){
+let sum = 0; 
+for (let i = 0; i < numArray.length; i++){
+    sum = sum+numArray[i]
+}
+return sum
+
+}
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+function average (numArray){
+   return sum(numArray)/numArray.length
+}
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest {}number in that array.
